@@ -1,0 +1,213 @@
+.seller-dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h4 {
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-left: 270px; /* Adjust this based on the width of your sidebar */
+  padding: 20px;
+}
+
+.dashboard-graphic {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stat-card {
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.stat-card img {
+  width: 40px;
+  margin-top: 10px;
+}
+.features-section .feature-card {
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.features-section .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
+}
+
+.features-section .feature-card .card-title {
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.features-section .feature-card .card-text {
+  color: #6c757d;
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f7faff;
+}
+#wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.list-group-item:hover {
+  background-color: #343a40;
+}
+.stat-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .nav-link.active {
+  background-color: #007bff;
+}
+/* Ensure that the main content grows flexibly */
+.main-content {
+  flex: 1;
+}
+
+/* Responsive spacing for sidebar */
+@media (max-width: 991px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+  }
+
+  .main-content {
+    margin-left: 250px;
+  }
+}
+
+/* Card styling for stat cards */
+.stat-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  color: #495057;
+}
