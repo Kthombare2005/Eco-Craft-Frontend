@@ -1,3 +1,15 @@
+/* Sidebar Styling */
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  background-color: #343a40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
 .sidebar h4 {
   font-size: 1.5rem;
 }
@@ -13,34 +25,44 @@
   align-items: center;
 }
 
-.sidebar .dropdown-toggle img {
-  margin-right: 10px;
-}
-
 .sidebar .dropdown-menu {
   background-color: #343a40;
 }
-.sidebar {
-  transition: all 0.3s ease-in-out;
-  z-index: 1040;
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full-width sidebar for small screens */
+    height: auto;
+    position: fixed;
+    display: none; /* Hidden by default */
+  }
+
+  /* Show the sidebar when it's toggled */
+  .sidebar.show {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1050;
+    background-color: #343a40;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
 }
 
-.btn-dark {
-  z-index: 1050;
-}
-/* Sidebar.css */
-.sidebar {
-  height: 100vh;
-  width: 250px;
-  background-color: #343a40;
-  position: fixed;  /* Keep the sidebar fixed */
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hide the hamburger button on larger screens */
+  }
 
-.main-content {
-  margin-left: 250px; /* Adjust content to avoid being overlapped by sidebar */
-  padding: 20px;
-  flex-grow: 1;
+  .sidebar {
+    display: block; /* Sidebar visible on larger screens */
+  }
 }

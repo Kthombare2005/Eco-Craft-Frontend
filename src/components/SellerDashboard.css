@@ -1,213 +1,157 @@
-.seller-dashboard {
-  display: flex;
-}
+/* SellerDashboard.css */
 
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  background-color: #343a40;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+/* ---------------------------
+   Preserved Styles
+--------------------------- */
 
-.sidebar h4 {
-  color: white;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 15px;
-}
-
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: block;
-}
-
-.sidebar ul li a:hover {
-  text-decoration: underline;
-}
-
-.main-content {
-  margin-left: 270px; /* Adjust this based on the width of your sidebar */
-  padding: 20px;
-}
-
-.dashboard-graphic {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.stat-card {
-  border-radius: 8px;
-  transition: box-shadow 0.3s;
-}
-
-.stat-card:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.stat-card img {
-  width: 40px;
-  margin-top: 10px;
-}
-.features-section .feature-card {
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.features-section .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #f0f8ff;
-}
-
-.features-section .feature-card .card-title {
-  font-size: 1.25rem;
-  color: #007bff;
-}
-
-.features-section .feature-card .card-text {
-  color: #6c757d;
-}
-
-.stat-card {
-  transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #f7faff;
-}
-#wrapper {
-  display: flex;
-  align-items: stretch;
-}
-
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  transition: margin 0.25s ease-out;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
-
-#page-content-wrapper {
-  width: 100%;
-}
-
-.sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-}
-
-.list-group-item {
-  border: none;
-}
-
-.list-group-item:hover {
-  background-color: #343a40;
-}
-.stat-card {
+/* Greeting Section */
+.greeting-container {
+  position: absolute;
+  top: 20px;
+  left: 260px;
   background-color: #f8f9fa;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Features Section Heading */
+.mt-5 {
+  position: absolute;
+  top: 150px; /* Default positioning */
+  left: 280px; /* Default alignment */
+  margin-top: 20px;
+  z-index: 900;
+  margin-bottom: 10px
+}
+
+.main-content .mt-4 {
+  margin-top: 0 !important; /* Ensure no margin at the top of the cards */
+  margin-bottom: 20vh;
+}
+
+/* ---------------------------
+   Updated Styles
+--------------------------- */
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  /* Ensure there's space for the sidebar */
+  margin-left: 260px;
+  transition: margin-left 0.3s;
+}
+
+/* Feature Cards Container */
+.main-content .mt-4 {
+  margin-top: 40px; /* Reduced from 80px to move cards upwards */
+}
+
+/* Feature Card Styles */
+.feature-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background-color: #ffffff;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar {
-  height: 100vh;
-  background-color: #343a40;
-  color: white;
+/* Feature Icon Styling */
+.feature-icon {
+  font-size: 2.5rem;
+  color: #4e73df;
 }
 
-.sidebar a {
-  color: white;
-  text-decoration: none;
-}
+/* Responsive Adjustments */
 
-.sidebar .nav-link.active {
-  background-color: #007bff;
-}
-/* Ensure that the main content grows flexibly */
-.main-content {
-  flex: 1;
-}
-
-/* Responsive spacing for sidebar */
-@media (max-width: 991px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+/* For small screens (e.g., smartphones) */
+@media (max-width: 576px) {
+  /* Greeting Container */
+  .greeting-container {
+    left: 20px; /* Adjust the left value for smaller screens */
+    width: 90%; /* Make the container responsive */
+    top: 10px; /* Adjust top to ensure it fits */
   }
 
+  /* Features Heading */
+  .mt-5 {
+    top: 120px; /* Reduced from 150px to 120px */
+    left: 20px; /* Align with the greeting container */
+    width: 90%;
+  }
+
+  /* Main Content Area */
   .main-content {
-    margin-top: 20px;
+    margin-left: 0; /* Remove left margin for full width */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Feature Cards Container */
+  .main-content .mt-4 {
+    margin-top: 30px; /* Further reduce margin-top for small screens */
   }
 }
 
-@media (min-width: 992px) {
-  .sidebar {
-    width: 250px;
-    height: 100vh;
-    position: fixed;
+/* For medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Greeting Container */
+  .greeting-container {
+    left: 40px; /* Slightly adjust left for medium screens */
+    width: 85%;
+    top: 15px;
   }
 
+  /* Features Heading */
+  .mt-5 {
+    top: 140px; /* Reduced from 150px to 140px */
+    left: 40px; /* Align with the greeting container */
+    width: 85%;
+  }
+
+  /* Main Content Area */
   .main-content {
-    margin-left: 250px;
+    margin-left: 0; /* Remove left margin for tablets */
+    padding: 15px; /* Adjust padding for medium screens */
+  }
+
+  /* Feature Cards Container */
+  .main-content .mt-4 {
+    margin-top: 35px; /* Adjust margin-top for medium screens */
   }
 }
 
-/* Card styling for stat cards */
-.stat-card {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/* For large screens (default behavior) */
+@media (min-width: 769px) {
+  /* Greeting Container */
+  .greeting-container {
+    left: 260px;
+    width: auto;
+    top: 20px; /* Ensure greeting remains at the top */
+  }
 
-.stat-card h4 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+  /* Features Heading */
+  .mt-5 {
+    top: 130px; /* Reduced from 150px to 130px */
+    left: 280px;
+    width: auto;
+  }
 
-.stat-card p {
-  font-size: 1.1rem;
-  color: #495057;
+  /* Main Content Area */
+  .main-content {
+    margin-left: 260px; /* Ensure it matches the Sidebar width */
+    padding: 20px;
+  }
+
+  /* Feature Cards Container */
+  .main-content .mt-4 {
+    margin-top: 40px; /* Adjust margin-top for large screens */
+  }
 }
